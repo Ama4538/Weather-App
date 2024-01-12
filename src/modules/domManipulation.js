@@ -17,15 +17,22 @@ import {
 
 let location = '22152';
 window.onload = async () => {
-    changeData(await getWeatherAPI(location));
+  changeData(await getWeatherAPI(location));
 }
 
 locationFormElement.addEventListener("submit", async (e) => {
   e.preventDefault();
   location = locationFormInputElement.value;
-  locationFormInputElement.setAttribute('placeholder', `${location}`);
-  locationFormInputElement.value = '';
-  changeData(await getWeatherAPI(location));
+  if (location.length == 5) {
+    locationFormInputElement.setAttribute('placeholder', `${location}`);
+    locationFormInputElement.value = '';
+    let dataValue = await getWeatherAPI(location);
+    if (dataValue !== null) {
+      changeData(dataValue);
+    }
+  } else {
+    alert("Please input a valid zip code");
+  }
 });
 
 const changeData = (data) => {

@@ -4,7 +4,12 @@ async function getWeatherAPI(location) {
   try {
     const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=b760eb337a7747c5a27155632232107&q=${location}&days=5&aqi=no&alerts=no`, { mode: 'cors' });
     let data = await response.json();
-    return await data;
+    if (typeof data.forecast === 'undefined') {
+      alert("Please input a valid zip code")
+      return null;
+    } else {
+      return await data;
+    }
   } catch {
   }
 }

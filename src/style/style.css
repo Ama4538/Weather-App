@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+  --current-background-image: url('../Images/noaa-kcvlb727mn8-unsplash.jpg');
+  --font-color: 226, 232, 240;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(var(--font-color));
+  user-select: none;
+}
+
+body {
+  background-image: var(--current-background-image);
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  position: relative;
+  display: grid;
+  width: 100dvw;
+  height: 100dvh;
+  backdrop-filter: blur(4px);
+  background-color: rgb(0, 0, 0, 0.3);
+
+}
+
+.content-area {
+  position: absolute;
+  place-self: center;
+  width: 95%;
+  height: 90%;
+  background-image: var(--current-background-image);
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-position: 10% 55%;
+  border-radius: 1rem;
+  border: 1rem solid rgb(71, 85, 105, 0.9);
+}
+
+.content-area__darkenBG {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.content-area__column-left,
+.content-area__column-right {
+  height: 100%;
+}
+
+.content-area__column-left {
+  background: transparent;
+}
+
+/* Right Column */
+.content-area__column-right {
+  padding: 4vmin 4.5vmin 2.5vmin;
+  overflow: hidden;
+  background-color: rgb(51, 65, 85, 0.8);
+  border-left: 3px solid rgb(71, 85, 105, 0.9);
+}
+
+/* Upper */
+.content-area__upper-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vmin;
+  width: 100%;
+  padding-bottom: 3vmin;
+  border-bottom: 2px solid rgb(71, 85, 105, 0.9);
+}
+
+.content-area__upper-right-form {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: clamp(1.5rem, 6vmin, 3rem);
+  overflow: hidden;
+  border: 2px solid rgb(71, 85, 105, 0.9);
+  border-radius: 0.5rem;
+}
+
+.content-area__upper-right-form::before,
+.content-area__upper-right-btn::after,
+.content-area__upper-right-winds::before {
+  position: absolute;
+  top: 10%;
+  left: 2.5%;
+  display: inline;
+  font-family: 'material symbols outlined';
+  font-size: clamp(1.5rem, 3vmin, 2.35rem);
+}
+
+.content-area__upper-right-form::before {
+  content: '\e0c8';
+}
+
+.content-area__upper-right-input {
+  width: 85%;
+  height: 100%;
+  padding-top: 0.2vmin;
+  padding-left: 5.5vmin;
+  font-size: clamp(1rem, 2vmin, 1.85rem);
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.content-area__upper-right-input::placeholder {
+  color: rgb(var(--font-color), 0.5);
+}
+
+.content-area__upper-right-btn {
+  position: relative;
+  width: 15%;
+  height: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.content-area__upper-right-btn::after {
+  content: '\e5c8';
+}
+
+.content-area__upper-right-temp {
+  padding: 2vmin 0 2vmin 0;
+  font-size: clamp(3rem, 8.5vmin, 6.5rem);
+}
+
+.content-area__upper-right-winds {
+  position: relative;
+  padding-bottom: 1vmin;
+  padding-left: 3vmin;
+  margin-top: -3vmin;
+  font-size: clamp(1rem, 2.5vmin, 1.5rem);
+  color: rgb(var(--font-color), 0.5);
+}
+
+.content-area__upper-right-winds::before {
+  content: '\efd8';
+  top: 2.5%;
+  left: -1%;
+  font-size: clamp(1rem, 2.5vmin, 1.5rem);
+  color: rgb(var(--font-color));
+}
+
+/* Lower */
+.content-area__lower-right,
+.content-area__lower-right-forecast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.content-area__lower-right-forecast {
+  padding: 2.5vmin 0 0 0;
+  gap: 3vmin;
+}
+
+.content-area__lower-right-heading {
+  padding-top: 2vmin;
+  font-size: clamp(1.25rem, 2.5vmin, 1.8rem);
+}
+
+.content-area__lower-right-forecastitem {
+  display: flex;
+  align-items: center;
+  gap: 2vmin;
+  width: 100%;
+}
+
+.content-area__lower-right-img {
+  aspect-ratio: 1 / 1;
+  width: 15%;
+  object-fit: cover;
+  background-color: rgb(71, 85, 105, 0.6);
+  border-radius: 0.5rem;
+}
+
+.content-area__lower-right-infocontainer > p {
+  font-size: clamp(1rem, 2vmin, 2rem);
+}
+
+.content-area__lower-right-infocontainer>p:nth-child(2) {
+  font-size: clamp(0.8rem, 1.8vmin, 2rem);
+  line-height: 3vmin;
+  color: rgb(var(--font-color), 0.5);
+}
+
+.content-area__lower-right-tempcontainer {
+  padding-left: 1vmin;
+  margin-left: auto;
+  width: 20%;
+  font-size: clamp(1rem, 2.25vmin, 2rem);
+  border-left: 3px solid rgb(71, 85, 105, 0.6);
+}
+
+/* Left Column */
+.content-area__column-left {
+  padding: 0 8vmin;
+}
+
+/* Upper */
+.content-area__column-left-upper {
+  display: flex;
+  flex-direction: column;
+  padding: 4vmin 0 1vmin;
+  width: 100%;
+  height: 70%;
+  border-bottom: 3px solid rgb(71, 85, 105, 0.6);
+}
+
+.content-area__column-left-upper-date {
+  display: flex;
+  justify-content: flex-end;
+  font-size: clamp(1.5rem, 3vmin, 2rem);
+}
+
+.content-area__column-left-upper-location {
+  display: flex;
+  margin-top: auto;
+  justify-content: flex-end;
+  font-size: clamp(3rem, 8.5vmin, 6.5rem);
+}
+
+/* Lower */
+.content-area_column-left-lower-container {
+  display: flex;
+  overflow: hidden;
+  padding-top: 2vmin;
+  gap: 1vmin;
+  width: 100%;
+  height: 30%;
+  cursor: pointer;
+}
+
+.content-area__column-left-lower {
+  display: flex;
+  gap: 1vmin;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.content-area__column-left-lower-timecontainer {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5vmin 1vmin 1.5vmin 1vmin;
+  gap: 1.5vmin;
+  width: 10%;
+  height: 90%;
+  background-color: rgb(30, 41, 59, 0.7);
+  border-radius: 0.75rem;
+}
+
+.content-area__column-left-lower-timecontainer-img {
+  aspect-ratio: 1 / 1;
+  width: 80%;
+  object-position: center;
+  object-fit: cover;
+  background-color: rgb(71, 85, 105, 0.6);
+  border-radius: 0.5rem;
+}
+
+.content-area__column-left-lower-timecontainer > p:nth-child(1) {
+  padding-bottom: 0.5vmin;
+  border-bottom: 2px solid rgb(71, 85, 105, 0.6);
+  font-size: clamp(1rem, 2vmin, 2rem);
+}
+
+.content-area__column-left-lower-timecontainer > p:nth-child(3) {
+  font-size: clamp(1.2rem, 2.2vmin, 2.2rem);
+  font-weight: 700;
+}

@@ -2,8 +2,11 @@ import { location } from "./domManipulation";
 
 async function getWeatherAPI(location) {
   try {
-    const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=b760eb337a7747c5a27155632232107&q=${location}&days=5&aqi=no&alerts=no`, { mode: 'cors' });
+    // API from https://www.weatherapi.com/api-explorer.aspx#forecast --Free 
+    const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=1e62c76943724d31b6834354241201&q=${location}&days=3&aqi=no&alerts=no
+    `, { mode: 'cors' });
     let data = await response.json();
+    console.log(data);
     if (typeof data.forecast === 'undefined') {
       alert("Please input a valid zip code")
       return null;

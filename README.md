@@ -7,7 +7,7 @@ Weather App displaying a 24 hour weather forecast and 3 day forecast from a free
 - [Access](#Access)
 - [Installation](#installation)
 - [Features](#features)
-- [Tech Stack] (#tech-stack)
+- [Tech Stack](#tech-stack)
 - [License](#license)
 - [Credit](#Credit)
 

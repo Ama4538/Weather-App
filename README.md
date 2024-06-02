@@ -28,9 +28,6 @@ Accessible from https://ama4538.github.io/Weather-App/
 - CSS
 - JavaScript
 
-### Tools
-- Webpack
-
 ## License
 Distributed under the MIT License. See `LICENSE` for more information.
 

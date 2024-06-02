@@ -1,12 +1,13 @@
 ![Screenshot](./Image/Screenshot.png)
 
 # Weather-App
-Weather App containing a searchable zipcode for a location's weather displaying a 24 hour weather forecast and 3 day forecast from a free weather API. 
+Weather App displaying a 24 hour weather forecast and 3 day forecast from a free weather API. 
 
 ## Table of Contents
 - [Access](#Access)
 - [Installation](#installation)
 - [Features](#features)
+- [Tech Stack] (#tech-stack)
 - [License](#license)
 - [Credit](#Credit)
 
@@ -19,7 +20,10 @@ Accessible from https://ama4538.github.io/Weather-App/
 3. Run built in script: npm run build
 4. Open on localHost: npm run preview
 
-### Tech Stack
+## Features
+- Searchable zipcode for a location's weather
+
+### Tech-Stack
 - HTML
 - CSS
 - JavaScript

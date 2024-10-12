@@ -19,7 +19,7 @@ Accessible from https://ama4538.github.io/Weather-App/
 1. **Clone the repository:**
     ```bash
     git clone https://github.com/Ama4538/Weather-App.git
-    cd PortfolioV3
+    cd Weather-App
     ```
 2. **Install dependencies:**
     ```bash

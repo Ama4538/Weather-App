@@ -8,6 +8,7 @@ Weather App displaying a 24 hour weather forecast and 3 day forecast from a free
 - [Installation](#installation)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
 - [License](#license)
 - [Credit](#Credit)
 
@@ -15,10 +16,22 @@ Weather App displaying a 24 hour weather forecast and 3 day forecast from a free
 Accessible from https://ama4538.github.io/Weather-App/
 
 ## Installation
-1. Clone the repository: git clone https://github.com/Ama4538/Weather-App.git
-2. Install dependencies: npm install
-3. Run built in script: npm run build
-4. Open on localHost: npm run preview
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/Ama4538/Weather-App.git
+    cd PortfolioV3
+    ```
+2. **Install dependencies:**
+    ```bash
+    npm i
+    ```
+3. **Build and Start the server:**
+    ```bash
+    npm build
+    npm start
+    ```
+4. **Access the application:**
+Open your browser and go to localhost
 
 ## Features
 - Searchable zipcode for a location's weather
@@ -27,6 +40,19 @@ Accessible from https://ama4538.github.io/Weather-App/
 - HTML
 - CSS
 - JavaScript
+
+## Project Structure
+```
+├── public/                 # Static Files
+│   index.html              # HTML file
+├── src/                    # Source folder
+│   ├── Images/             # All images
+│   ├── modules/            # All modules used by the application
+│   ├── style/              # Styling
+│   ├── index.js            # Main application
+├── .gitignore              # Git ignore file
+└── package.json            # Project metadata and dependencies
+```
 
 ## License
 Distributed under the MIT License. See `LICENSE` for more information.
